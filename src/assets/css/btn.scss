@@ -1,0 +1,36 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  max-width: max-content;
+  grid-column-gap: 5px;  
+  cursor: pointer;
+  margin: auto;
+  &.-left{
+    img {
+      transform: scale(-1,1)
+    }
+  }
+  img {
+    flex: 1 0 auto;
+    width: 100%;
+    max-width: 20px;
+    height: auto;
+  }
+  span {
+    &:empty {
+      display: none;
+    }
+  }
+  @media screen and (max-width: 640px) {
+    &:not(.-left) {
+      img {
+        transform: rotate(90deg)
+      }
+    }
+    &.-left{
+      img {
+        transform: rotate(-90deg)
+      }
+    }
+  }
+}

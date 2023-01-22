@@ -1,0 +1,20 @@
+.grid-list {
+  display: block;
+  border: 1px solid #ccc;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.grid-item {
+  padding: 10px;
+  cursor: pointer;
+  &:hover {
+    background-color: rgba(239, 239, 239, .5);
+  }
+  &.-active {
+    background-color: rgba(239, 239, 239, 1);
+  }
+  &.-transition {
+    transition: 0s;
+  }
+}
